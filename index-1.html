@@ -1,3 +1,19 @@
+<div class="tabs">
+    <button class="tab-link active" onclick="openTab(event, 'manual')">직접 입력</button>
+    <button class="tab-link" onclick="openTab(event, 'excel')">엑셀 업로드 (신규)</button>
+</div>
+
+<div id="manual" class="tab-content" style="display:block;">
+    </div>
+
+<div id="excel" class="tab-content" style="display:none;">
+    <h3>엑셀 데이터 불러오기</h3>
+    <p>운송비 단가표 엑셀 파일을 선택해 주세요.</p>
+    <input type="file" id="excelFile" accept=".xlsx, .xls" />
+    <button onclick="processExcel()">파일 분석하기</button>
+    <div id="excelPreview"></div>
+</div>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
